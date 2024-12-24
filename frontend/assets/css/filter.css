@@ -1,0 +1,53 @@
+/* Filter modal - open from the left side */
+.filter-modal {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    /* Positioning it from the left */
+    width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    padding: 20px;
+    z-index: 101;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+}
+
+/* Category and date options styles */
+.category-option {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    color: #06060680;
+}
+
+.category-option.selected {
+    background-color: #FFF1EA;
+    color: #ff5722;
+}
+
+.category-option:hover {
+    background-color: #f0f0f0;
+}
+
+/* Filter footer */
+.filter-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#btnReset,
+#btnApplyFilter {
+    width: 48%;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

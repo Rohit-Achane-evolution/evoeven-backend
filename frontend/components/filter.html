@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Component</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/filter.css">
+</head>
+
+<body class="p-4">
+    <!-- FilterModal -->
+    <div class="overlay" id="overlay"></div>
+    <div class="filter-modal" id="filterModal">
+        <div class="filter-header" style="display:none">
+            <button class="btn-close" id="closeModal" aria-label="Close"></button>
+        </div>
+        <!-- Category Section -->
+        <div class="filter-section">
+            <p class="fw-bold mb-1">By Categories</p>
+            <div class="category-option" data-category="Singing Concert">Singing Concert</div>
+            <div class="category-option selected" data-category="Meeting">Meeting</div>
+            <div class="category-option" data-category="Dance Performance">Dance Performance</div>
+            <div class="category-option" data-category="Standup Comedy">Standup Comedy</div>
+            <div class="category-option" data-category="Magic Show">Magic Show</div>
+            <div class="category-option" data-category="Movie Show">Movie Show</div>
+        </div>
+        <!-- Date Filter Section -->
+        <div class="filter-section">
+            <p class="fw-bold mb-1">By Date</p>
+            <div class="category-option" data-date="This Month">Within this month</div>
+            <div class="category-option" data-date="Next 6 Months">Next 6 months</div>
+        </div>
+    
+        <!-- Filter Footer -->
+        <div class="">
+            <button class="btn btn-light" id="btnReset">Reset</button>
+            <button class="btn btn-add-event flex-grow-1" id="btnApplyFilter">Apply Filter</button>
+        </div>
+    </div>
+
+
+    <script src="../assets/js/filter.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,324 @@
+body {
+    background-color: #fff2ef;
+}
+
+
+.event-card {
+    transition: transform 0.2s;
+    padding: 5px;
+    border-radius: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.btn-add-event {
+    background-image: linear-gradient(to right, #FD5900, #FFB48C);
+}
+
+.event-card:hover {
+    transform: translateY(-15px);
+}
+
+.logo {
+    height: 40px;
+}
+
+.event-image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+
+}
+
+.list-view .event-image {
+    width: 100px;
+    height: 60px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.empty-state img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.event-type-badge {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    background-color: #ff5722;
+    color: white;
+    border-radius: 12px;
+}
+
+.btn-add-event:hover {
+    background-color: #f4511e;
+    border-color: #f4511e;
+    color: white;
+}
+
+.modal-content {
+    border-radius: 15px;
+}
+
+
+
+
+.image-upload-area {
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+h3 {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+p.text-muted {
+    font-size: 0.9rem;
+    margin-top: 0;
+}
+
+.height {
+    height: fit-content;
+}
+
+
+/* Custom dropdown container */
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+    /* transform: rotate(180deg); */
+}
+
+/* Dropdown button */
+.dropdown-toggle {
+    width: 100%;
+    padding: 0.5rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+
+}
+
+/* Open dropdown button focus */
+.dropdown-toggle:focus {
+    outline: none;
+    border-color: #ff5722;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    list-style: none;
+    padding: 0;
+    z-index: 1000;
+
+}
+
+/* Show the dropdown menu */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Dropdown items */
+.dropdown-item {
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover styling for dropdown items */
+.dropdown-item:hover {
+    background-color: #ffe7dc;
+    /* Light orange background */
+    color: #ff5722;
+    /* Orange text */
+}
+
+/* Selected dropdown button text */
+.dropdown-toggle.selected {
+    color: #ff5722;
+}
+
+
+
+
+/* ////////// */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+.filter-modal {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    /* Positioning it from the left */
+    width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    padding: 20px;
+    z-index: 101;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+}
+
+/* Category and date options styles */
+.category-option {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    color: #06060680;
+}
+
+.category-option.selected {
+    background-color: #FFF1EA;
+    color: #ff5722;
+}
+
+.category-option:hover {
+    background-color: #f0f0f0;
+}
+
+/* Filter footer */
+.filter-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#btnReset,
+#btnApplyFilter {
+    width: 48%;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 767px) {
+    .modal-dialog {
+        margin: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px 15px 0 0;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Modal content sliding in from the bottom */
+    .modal.fade .modal-dialog {
+        transform: translateY(100%);
+    }
+
+    .modal.fade.show .modal-dialog {
+        transform: translateY(0);
+    }
+
+    /* Optionally, adjust modal header and footer padding for mobile */
+    .modal-header,
+    .modal-footer {
+        padding: 1rem;
+    }
+}
+
+td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+td:hover {
+    white-space: normal;
+}
+
+td[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+
+
+
+/* /////////////// pagination */
+
+.pagination .page-link {
+    color: #6c757d;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 4px;
+}
+
+.pagination .page-link:hover {
+    background-color: #f8f9fa;
+    color: #ff4500;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+}
+
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+    color: #6c757d;
+    font-weight: normal;
+}
+
+.pagination .page-item:first-child .page-link::before {
+    content: "←";
+    margin-right: 8px;
+}
+
+.pagination .page-item:last-child .page-link::after {
+    content: "→";
+    margin-left: 8px;
+}

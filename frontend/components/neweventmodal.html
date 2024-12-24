@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newEventModal</title>
+</head>
+
+<body>
+    <!-- New Event Modal -->
+    <div class="modal fade" id="newEventModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">New Event</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="newEventForm">
+                        <div class="mb-2">
+                            <div class="image-upload-area" id="imageUploadArea">
+                                <i class="bi bi-cloud-upload fs-3"></i>
+                                <p class="mb-0">Drop an image here or click to upload !</p>
+                                <input name="eventImage" type="file" class="d-none" id="eventImage" accept="image/*">
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Event Name</label>
+                            <input name="eventName" type="text" class="form-control" placeholder="Ex. Jhan's birthday"
+                                required>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Event Date</label>
+                            <input name="eventDate" type="date" class="form-control" required>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Event Category</label>
+                            <div class="custom-select-container">
+                                <select name="eventCategory" class="form-select custom-select" required>
+                                    <option value="">Select a option...</option>
+                                    <option>Singing Concert</option>
+                                    <option>Meeting</option>
+                                    <option>Dance Performance</option>
+                                    <option>Standup Comedy</option>
+                                    <option>Magic Show</option>
+                                    <option>Movie Show</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" form="newEventForm" class="btn btn-add-event">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+body {
+    background-color: #fff2ef;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    justify-content: center;
+}
+
+.login-container {
+    background-color: #fff2ef;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.page-title {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.brand-title {
+
+    font-family: "Inter", sans-serif;
+    /* font-size: 2rem; */
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+    line-height: 48.41px;
+}
+
+.brand-title span {
+    color: #ff6b35;
+}
+
+.welcome-text {
+    font-family: "Inter", sans-serif;
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 5px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+.form-label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    border: 1px solid #b8b6b6;
+    padding: 0.75rem;
+    border-radius: 10px;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+}
+
+.btn-login {
+    background: linear-gradient(#FD5900, #FFB48C);
+    /* Use 'background' instead of 'background-color' */
+    border: none;
+    padding: 0.75rem;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background-color: #ff5a1f;
+}
+
+.forgot-password {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.form-check-input:checked {
+    background-color: #ff6b35;
+    border-color: #ff6b35;
+}
