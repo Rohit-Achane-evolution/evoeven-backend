@@ -39,7 +39,7 @@ export class UserService {
 
 
     // Verify the reset token
-   
+
     async login() {
         const users = await this.prisma.user.findFirst(); // Fetch all users
         return {

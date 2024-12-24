@@ -7,7 +7,6 @@ import * as bcrypt from 'bcrypt';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
-
   app.enableCors();
 
   const prisma = app.get(PrismaService);
@@ -15,7 +14,6 @@ async function bootstrap() {
   const existingUser = await prisma.user.findFirst({
     where: { username: 'rohitAchane' },
   });
-
 
   if (!existingUser) {
     const hashedPassword = await bcrypt.hash('123456', 10); // Hash the password
@@ -26,7 +24,6 @@ async function bootstrap() {
         password: hashedPassword,
       },
     });
-
     console.log('Static user created successfully!');
   } else {
     console.log('Static user already exists!');

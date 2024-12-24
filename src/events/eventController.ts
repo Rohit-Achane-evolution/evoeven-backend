@@ -9,21 +9,47 @@ export class EventController {
     constructor(private readonly eventService: EventService) { }
 
     @UseGuards(JwtAuthGuard)
-    @Get()
-    async getAllEvents(@Query('page') page: string, @Query('limit') limit: string) {
-        try {
+    // @Get()
+    // async getAllEvents(@Query('page') page: string, @Query('limit') limit: string) {
+    //     try {
 
+    //         const pageNumber = parseInt(page, 10) || 1;
+    //         const limitNumber = parseInt(limit, 10) || 10;
+    //         return await this.eventService.getAllEvents(pageNumber, limitNumber);
+
+    //     } catch (error) {
+    //         if (error instanceof BadRequestException) {
+    //             throw error;
+    //         }
+    //         throw new BadRequestException('Unable to fetch Events');
+    //     }
+    // }
+
+    @Get()
+    async getAllEvents(
+        @Query('page') page: string,
+        @Query('limit') limit: string,
+        @Query('search') search: string,
+        @Query('categories') categories: string,
+        @Query('dates') dates: string,
+    ) {
+        try {
             const pageNumber = parseInt(page, 10) || 1;
             const limitNumber = parseInt(limit, 10) || 10;
-            return await this.eventService.getAllEvents(pageNumber, limitNumber);
 
+            // Parse categories and dates from query strings
+            const categoryArray = categories ? categories.split(',') : [];
+            const dateArray = dates ? dates.split(',') : [];
+
+            return await this.eventService.getAllEvents(pageNumber, limitNumber, search, categoryArray, dateArray);
         } catch (error) {
             if (error instanceof BadRequestException) {
                 throw error;
             }
-            throw new BadRequestException('Unable to fetch Events');
+            throw new BadRequestException('Unable to fetch events');
         }
     }
+
 
     @UseGuards(JwtAuthGuard)
     @Post()

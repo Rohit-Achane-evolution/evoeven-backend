@@ -18,7 +18,7 @@ export class UserController {
         }
     }
 
-    @Post()
+    @Post('cerate')
     async createUser(@Body() user: UsersDto) {
         try {
             return await this.userService.createUser(user);
@@ -31,7 +31,7 @@ export class UserController {
         }
     }
 
-    
+
 
     // @Put(':username')
     // async updateUser(
